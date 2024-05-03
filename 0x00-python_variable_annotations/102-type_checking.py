@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
+"""Use mypy to validate the following piece of code
+and apply any necessary changes.
 """
-Zooms in on the elements of the input
-list by replicating each element 'factor' times.
-"""
-from typing import List, Tuple
+
+from typing import Tuple, List, Any
 
 
-def zoom_array(lst: List, factor: int = 2) -> List:
-    """
-    Creates multiple copies of items in a tuple.
-    """
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """Corrected annotations"""
     zoomed_in: List = [
         item for item in lst
         for i in range(factor)
@@ -17,7 +15,7 @@ def zoom_array(lst: List, factor: int = 2) -> List:
     return zoomed_in
 
 
-array = [12, 72, 91]
+array = (12, 72, 91)
 
 zoom_2x = zoom_array(array)
 
